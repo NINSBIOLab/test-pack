@@ -77,9 +77,7 @@ export default function ReportPageMicro({ data }: { data: IPatientDataMicro }) {
                             <td className="px-1 py-[2px] font-[14px] border font-bold">HbA1C</td>
                             <td className="px-1 py-[2px] font-[14px] text-center border">{data.HbA1c}</td>
                             <td className="px-1 py-[2px] font-[14px] text-center border">%</td>
-                            <td className="px-1 py-[2px] font-[14px] border whitespace-pre">
-                                {`Reference Normal value(NGSP)4.6-6.2\nADA recommended reference Range: 5.7-6.4\nHbA1c(High Risk Group)\nAbove  6.5 HbA1c (Diabetics) `}
-                            </td>
+                            <td className="px-1 py-[2px] font-[14px] border whitespace-pre">4.6-6.2</td>
                         </tr>
                         <tr>
                             <td className="px-1 py-[2px] font-[14px] border font-bold">C-reactive Protein (CRP)</td>
@@ -115,7 +113,7 @@ export default function ReportPageMicro({ data }: { data: IPatientDataMicro }) {
                             <td className="px-1 py-[2px] font-[14px] border font-bold">S. 25-OH vitamin D</td>
                             <td className="px-1 py-[2px] font-[14px] text-center border">{data.vitD}</td>
                             <td className="px-1 py-[2px] font-[14px] text-center border">ng/ml</td>
-                            <td className="px-1 py-[2px] font-[14px] border">
+                            <td className="px-1 py-[2px] font-[14px] border whitespace-pre">
                                 {
                                     `Child : 20-100\nAdult : 30-100`
                                 }
