@@ -1,8 +1,8 @@
-"use client"; 
+"use client";
 import { useEffect, useRef, useState } from "react";
 import { NextPrint } from "@/components/PrintComponent/PrintComponent";
 import { useRouter } from "next/navigation";
-import {  IPatientDataMicro } from "@/constants";
+import { IPatientDataMicro } from "@/constants";
 import ReportPageMicro from "@/components/reportPage/ReportMicro";
 
 
@@ -39,6 +39,7 @@ export default function HomePage() {
   return (
 
     <div className="max-w-7xl mx-auto p-6">
+      <h1 className="text-center text-2xl text-teal-500 font-bold">Microbiology Department</h1>
       <div className="flex justify-between items-center mb-6">
 
         <h1 className="text-2xl font-bold">

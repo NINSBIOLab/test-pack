@@ -38,6 +38,14 @@ export default function ReportPage({ data }: { data: IPatientData }) {
                         <table>
                             <tbody>
                                 <tr>
+                                    <td className="font-bold py-[2px]">Print Date</td>
+                                    <td className="font-bold py-[2px]"><span className="mx-1">:</span></td>
+                                    <td className="font-bold py-[2px]">
+                                        {`${new Date().getDate()}/${new Date().getMonth() + 1}/${new Date().getFullYear()}`}
+                                    </td>
+
+                                </tr>
+                                <tr>
                                     <td className="font-bold py-[2px]">Mobile</td>
                                     <td className="font-bold py-[2px]"><span className="mx-1">:</span></td>
                                     <td className="font-bold py-[2px]">{data.mobileNumber}</td>
@@ -68,7 +76,9 @@ export default function ReportPage({ data }: { data: IPatientData }) {
                     <tbody>
                         <tr>
                             <td className="px-1 py-[2px] border font-bold">S. Iron</td>
-                            <td className="px-1 py-[2px] text-center border">{data.iron}</td>
+                            <td className="px-1 py-[2px] text-center border">
+                                {isNaN(Number(data.iron)) ? data.iron : Number(data.iron).toFixed(2)}
+                            </td>
                             <td className="px-1 py-[2px] text-center border">µmol/L</td>
                             <td className="px-1 py-[2px] border whitespace-pre">
                                 {
@@ -78,7 +88,10 @@ export default function ReportPage({ data }: { data: IPatientData }) {
                         </tr>
                         <tr>
                             <td className="px-1 py-[2px] border font-bold">S. Folate</td>
-                            <td className="px-1 py-[2px] text-center border">{data.folate}</td>
+                            <td className="px-1 py-[2px] text-center border">
+                                {isNaN(Number(data.folate)) ? data.folate : Number(data.folate).toFixed(2)}
+                            </td>
+
                             <td className="px-1 py-[2px] text-center border">ng/ml</td>
                             <td className="px-1 py-[2px] border whitespace-pre">
                                 {`2-16 Years : 5-21\n>16 Years: 3-20`}

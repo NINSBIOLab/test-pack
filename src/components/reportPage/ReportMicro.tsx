@@ -75,13 +75,13 @@ export default function ReportPageMicro({ data }: { data: IPatientDataMicro }) {
                     <tbody>
                         <tr>
                             <td className="px-1 py-[2px] font-[14px] border font-bold">HbA1C</td>
-                            <td className="px-1 py-[2px] font-[14px] text-center border">{data.HbA1c}</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">  {isNaN(Number(data.HbA1c)) ? data.HbA1c : Number(data.HbA1c).toFixed(2)}</td>
                             <td className="px-1 py-[2px] font-[14px] text-center border">%</td>
                             <td className="px-1 py-[2px] font-[14px] border whitespace-pre">4.6-6.2</td>
                         </tr>
                         <tr>
                             <td className="px-1 py-[2px] font-[14px] border font-bold">C-reactive Protein (CRP)</td>
-                            <td className="px-1 py-[2px] font-[14px] text-center border">{data.CRP}</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">  {isNaN(Number(data.CRP)) ? data.CRP : Number(data.CRP).toFixed(1)}</td>
                             <td className="px-1 py-[2px] font-[14px] text-center border">mg/L</td>
                             <td className="px-1 py-[2px] font-[14px] border">
                                 {
@@ -91,7 +91,7 @@ export default function ReportPageMicro({ data }: { data: IPatientDataMicro }) {
                         </tr>
                         <tr>
                             <td className="px-1 py-[2px] font-[14px] border font-bold">High Sensitive C-reactive Protein (CRP)</td>
-                            <td className="px-1 py-[2px] font-[14px] text-center border">{data.hsCRP}</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">  {isNaN(Number(data.hsCRP)) ? data.hsCRP : Number(data.hsCRP).toFixed(1)}</td>
                             <td className="px-1 py-[2px] font-[14px] text-center border">mg/L</td>
                             <td className="px-1 py-[2px] font-[14px] border">
                                 {
@@ -101,7 +101,9 @@ export default function ReportPageMicro({ data }: { data: IPatientDataMicro }) {
                         </tr>
                         <tr>
                             <td className="px-1 py-[2px] font-[14px] border font-bold">S. TSH</td>
-                            <td className="px-1 py-[2px] font-[14px] text-center border">{data.TSH}</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">
+                                {isNaN(Number(data.TSH)) ? data.TSH : Number(data.TSH).toFixed(2)}
+                            </td>
                             <td className="px-1 py-[2px] font-[14px] text-center border">µIU/mL</td>
                             <td className="px-1 py-[2px] font-[14px] border whitespace-pre">
                                 {
@@ -111,7 +113,9 @@ export default function ReportPageMicro({ data }: { data: IPatientDataMicro }) {
                         </tr>
                         <tr>
                             <td className="px-1 py-[2px] font-[14px] border font-bold">S. 25-OH vitamin D</td>
-                            <td className="px-1 py-[2px] font-[14px] text-center border">{data.vitD}</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">
+                                {isNaN(Number(data.vitD)) ? data.vitD : Number(data.vitD).toFixed(2)}
+                            </td>
                             <td className="px-1 py-[2px] font-[14px] text-center border">ng/ml</td>
                             <td className="px-1 py-[2px] font-[14px] border whitespace-pre">
                                 {
