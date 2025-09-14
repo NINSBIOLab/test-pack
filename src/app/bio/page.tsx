@@ -3,8 +3,7 @@ import ReportPage from "@/components/reportPage/ReportFormat";
 import { useEffect, useRef, useState } from "react";
 import { NextPrint } from "@/components/PrintComponent/PrintComponent";
 import { useRouter } from "next/navigation";
-import { IPatientData } from "@/constants";
-import Link from "next/link";
+import { IPatientData } from "@/constants"; 
 
 
 export default function HomePage() {
