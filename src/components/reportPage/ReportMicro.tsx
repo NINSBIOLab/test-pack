@@ -119,7 +119,7 @@ export default function ReportPageMicro({ data }: { data: IPatientDataMicro }) {
                             <td className="px-1 py-[2px] font-[14px] text-center border">ng/ml</td>
                             <td className="px-1 py-[2px] font-[14px] border whitespace-pre">
                                 {
-                                    `Child : 20-100\nAdult : 30-100`
+                                    `Child : 20-100                           \nAdult : 30-100`
                                 }
                             </td>
                         </tr>
