@@ -1,7 +1,7 @@
-import { IPatientData } from "@/constants";
+import { IPatientDataMicro } from "@/constants";
 
-export default function ReportPage({ data }: { data: IPatientData }) {
-
+export default function ReportPageMicro({ data }: { data: IPatientDataMicro }) {
+    const today = new Date();
     return (
         <div className="h-[1055px] w-[816px] p-4 px-6 mx-auto relative">
             <div className="header pt-8 pb-4 min-h-[170px]">
@@ -38,6 +38,14 @@ export default function ReportPage({ data }: { data: IPatientData }) {
                         <table>
                             <tbody>
                                 <tr>
+                                    <td className="font-bold py-[2px]">Print Date</td>
+                                    <td className="font-bold py-[2px]"><span className="mx-1">:</span></td>
+                                    <td className="font-bold py-[2px]">
+                                        {`${new Date().getDate()}/${new Date().getMonth() + 1}/${new Date().getFullYear()}`}
+                                    </td>
+
+                                </tr>
+                                <tr>
                                     <td className="font-bold py-[2px]">Mobile</td>
                                     <td className="font-bold py-[2px]"><span className="mx-1">:</span></td>
                                     <td className="font-bold py-[2px]">{data.mobileNumber}</td>
@@ -67,28 +75,52 @@ export default function ReportPage({ data }: { data: IPatientData }) {
                     </thead>
                     <tbody>
                         <tr>
-                            <td className="px-1 py-[2px] border font-bold">S. Iron</td>
-                            <td className="px-1 py-[2px] text-center border">{data.iron}</td>
-                            <td className="px-1 py-[2px] text-center border">µmol/L</td>
+                            <td className="px-1 py-[2px] border font-bold">S. TSH</td>
+                            <td className="px-1 py-[2px] text-center border">{data.TSH}</td>
+                            <td className="px-1 py-[2px] text-center border">µIU/mL</td>
                             <td className="px-1 py-[2px] border whitespace-pre">
                                 {
-                                    `Male: 11.6-31.3\nFemale: 9.0-30.4`
+                                    `0.40-4.90`
                                 }
                             </td>
                         </tr>
                         <tr>
-                            <td className="px-1 py-[2px] border font-bold">S. Folate</td>
-                            <td className="px-1 py-[2px] text-center border">{data.folate}</td>
-                            <td className="px-1 py-[2px] text-center border">ng/ml</td>
+                            <td className="px-1 py-[2px] border font-bold">HbA1C</td>
+                            <td className="px-1 py-[2px] text-center border">{data.HbA1c}</td>
+                            <td className="px-1 py-[2px] text-center border">%</td>
                             <td className="px-1 py-[2px] border whitespace-pre">
-                                {`2-16 Years : 5-21\n>16 Years: 3-20`}
+                                {`Reference Normal value(NGSP)4.6-6.2\nADA recommended reference Range: 5.7-6.4\nHbA1c(High Risk Group)\nAbove  6.5 HbA1c (Diabetics) `}
                             </td>
                         </tr>
                         <tr>
-                            <td className="px-1 py-[2px] border font-bold">S. Vitamin B12</td>
-                            <td className="px-1 py-[2px] text-center border">{data.b12}</td>
-                            <td className="px-1 py-[2px] text-center border">pg/ml</td>
-                            <td className="px-1 py-[2px] border">187 - 883</td>
+                            <td className="px-1 py-[2px] border font-bold">S. 25-OH vitamin D</td>
+                            <td className="px-1 py-[2px] text-center border">{data.vitD}</td>
+                            <td className="px-1 py-[2px] text-center border">ng/ml</td>
+                            <td className="px-1 py-[2px] border">
+                                {
+                                    `Child : 20-100\nAdult : 30-100`
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="px-1 py-[2px] border font-bold">C-reactive Protein (CRP)</td>
+                            <td className="px-1 py-[2px] text-center border">{data.CRP}</td>
+                            <td className="px-1 py-[2px] text-center border">mg/L</td>
+                            <td className="px-1 py-[2px] border">
+                                {
+                                    `< 10.0`
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="px-1 py-[2px] border font-bold">High Sensitive C-reactive Protein (CRP)</td>
+                            <td className="px-1 py-[2px] text-center border">{data.hsCRP}</td>
+                            <td className="px-1 py-[2px] text-center border">mg/L</td>
+                            <td className="px-1 py-[2px] border">
+                                {
+                                    `<1.0`
+                                }
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -97,13 +129,13 @@ export default function ReportPage({ data }: { data: IPatientData }) {
             <div className="absolute w-full left-0 bottom-0 px-4">
                 <div className="grid grid-cols-2 gap-4">
                     <div>
-                        <p className="font-bold text-lg pt-2"> Medical Technologist (Lab)</p>
+                        <p className="font-bold text-lg pt-2 text-[15px]"> Medical Technologist (Lab)</p>
                     </div>
                     <div className="ps-7">
-                        <h2 className="font-bold text-lg">Dr. Farzana Zaman Muna</h2>
-                        <p className="leading-[18px]">MBBS,M.Phil (Biochemistry)</p>
-                        <p className="leading-[18px]">Assistant Professor</p>
-                        <p className="leading-[18px]">National Institute Of Neuro-sciences & Hospital</p>
+                        <h2 className="font-bold text-lg">Dr. Md. Abdullah Yusuf</h2>
+                        <p className="leading-[18px]">Associate Professor</p>
+                        <p className="leading-[18px]">Department of Microbiology</p>
+                        <p className="leading-[18px]">National Institute of Neurosciences & Hospital</p>
                         <p className="leading-[18px]">Sher-E-Bangla Nagar, Dhaka-1207</p>
                     </div>
                 </div>
