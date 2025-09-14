@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { NextPrint } from "@/components/PrintComponent/PrintComponent";
 import { useRouter } from "next/navigation";
-import { IPatientData, IPatientDataMicro } from "@/constants";
+import {  IPatientDataMicro } from "@/constants";
 import ReportPageMicro from "@/components/reportPage/ReportMicro";
 
 

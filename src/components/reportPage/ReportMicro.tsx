@@ -1,7 +1,6 @@
 import { IPatientDataMicro } from "@/constants";
 
 export default function ReportPageMicro({ data }: { data: IPatientDataMicro }) {
-    const today = new Date();
     return (
         <div className="h-[1055px] w-[816px] p-4 px-6 mx-auto relative">
             <div className="header pt-8 pb-4 min-h-[170px]">
@@ -63,62 +62,62 @@ export default function ReportPageMicro({ data }: { data: IPatientDataMicro }) {
             </div>
 
             <div className="py-6">
-                <h1 className="text-center underline font-bold text-2xl pb-2">Biochemistry Report</h1>
+                <h1 className="text-center underline font-bold text-2xl pb-2">Microbiology Report</h1>
                 <table className="w-full">
                     <thead>
                         <tr>
-                            <td className="px-1 py-[2px] font-bold text-center border">Investigation</td>
-                            <td className="px-1 py-[2px] font-bold text-center border">Result</td>
-                            <td className="px-1 py-[2px] font-bold text-center border">Unit</td>
-                            <td className="px-1 py-[2px] font-bold text-center border">Ref. Value</td>
+                            <td className="px-1 py-[2px] font-[14px] font-bold text-center border">Investigation</td>
+                            <td className="px-1 py-[2px] font-[14px] font-bold text-center border">Result</td>
+                            <td className="px-1 py-[2px] font-[14px] font-bold text-center border">Unit</td>
+                            <td className="px-1 py-[2px] font-[14px] font-bold text-center border">Ref. Value</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td className="px-1 py-[2px] border font-bold">S. TSH</td>
-                            <td className="px-1 py-[2px] text-center border">{data.TSH}</td>
-                            <td className="px-1 py-[2px] text-center border">µIU/mL</td>
-                            <td className="px-1 py-[2px] border whitespace-pre">
-                                {
-                                    `0.40-4.90`
-                                }
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="px-1 py-[2px] border font-bold">HbA1C</td>
-                            <td className="px-1 py-[2px] text-center border">{data.HbA1c}</td>
-                            <td className="px-1 py-[2px] text-center border">%</td>
-                            <td className="px-1 py-[2px] border whitespace-pre">
+                            <td className="px-1 py-[2px] font-[14px] border font-bold">HbA1C</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">{data.HbA1c}</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">%</td>
+                            <td className="px-1 py-[2px] font-[14px] border whitespace-pre">
                                 {`Reference Normal value(NGSP)4.6-6.2\nADA recommended reference Range: 5.7-6.4\nHbA1c(High Risk Group)\nAbove  6.5 HbA1c (Diabetics) `}
                             </td>
                         </tr>
                         <tr>
-                            <td className="px-1 py-[2px] border font-bold">S. 25-OH vitamin D</td>
-                            <td className="px-1 py-[2px] text-center border">{data.vitD}</td>
-                            <td className="px-1 py-[2px] text-center border">ng/ml</td>
-                            <td className="px-1 py-[2px] border">
-                                {
-                                    `Child : 20-100\nAdult : 30-100`
-                                }
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="px-1 py-[2px] border font-bold">C-reactive Protein (CRP)</td>
-                            <td className="px-1 py-[2px] text-center border">{data.CRP}</td>
-                            <td className="px-1 py-[2px] text-center border">mg/L</td>
-                            <td className="px-1 py-[2px] border">
+                            <td className="px-1 py-[2px] font-[14px] border font-bold">C-reactive Protein (CRP)</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">{data.CRP}</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">mg/L</td>
+                            <td className="px-1 py-[2px] font-[14px] border">
                                 {
                                     `< 10.0`
                                 }
                             </td>
                         </tr>
                         <tr>
-                            <td className="px-1 py-[2px] border font-bold">High Sensitive C-reactive Protein (CRP)</td>
-                            <td className="px-1 py-[2px] text-center border">{data.hsCRP}</td>
-                            <td className="px-1 py-[2px] text-center border">mg/L</td>
-                            <td className="px-1 py-[2px] border">
+                            <td className="px-1 py-[2px] font-[14px] border font-bold">High Sensitive C-reactive Protein (CRP)</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">{data.hsCRP}</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">mg/L</td>
+                            <td className="px-1 py-[2px] font-[14px] border">
                                 {
-                                    `<1.0`
+                                    `< 1.0`
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="px-1 py-[2px] font-[14px] border font-bold">S. TSH</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">{data.TSH}</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">µIU/mL</td>
+                            <td className="px-1 py-[2px] font-[14px] border whitespace-pre">
+                                {
+                                    `0.40-4.90`
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="px-1 py-[2px] font-[14px] border font-bold">S. 25-OH vitamin D</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">{data.vitD}</td>
+                            <td className="px-1 py-[2px] font-[14px] text-center border">ng/ml</td>
+                            <td className="px-1 py-[2px] font-[14px] border">
+                                {
+                                    `Child : 20-100\nAdult : 30-100`
                                 }
                             </td>
                         </tr>
