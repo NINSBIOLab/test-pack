@@ -85,7 +85,7 @@ export default function HomePage() {
                                 {Object.values(patient).map((val, i) => (
                                     <td
                                         key={i}
-                                        className="border border-gray-400 px-2 py-1 text-center"
+                                        className={`border border-gray-400 px-2 py-1 ${i !== 1 ? "text-center" : "text-start"}`}
                                     >
                                         {val}
                                     </td>
