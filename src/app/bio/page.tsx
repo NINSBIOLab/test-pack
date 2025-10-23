@@ -29,7 +29,7 @@ export default function HomePage() {
     };
 
     useEffect(() => {
-        fetch(`/data/${center}.json`)
+        fetch(`/data/p2/${center}.json`)
             .then((res) => res.json())
             .then((data) => {
                 setPatients(data);

@@ -19,7 +19,7 @@ export default function ReportPage({ data }: { data: IPatientData }) {
                                 <tr>
                                     <td className="font-bold py-[2px]">Lab Id</td>
                                     <td className="font-bold py-[2px]"><span className="mx-1">:</span></td>
-                                    <td className="font-bold py-[2px]">{data.center}-{data.sl}</td>
+                                    <td className="font-bold py-[2px]">{data.center}-{data.sl} (Phase-2)</td>
                                 </tr>
                                 <tr>
                                     <td className="font-bold py-[2px]">Name</td>
@@ -74,35 +74,41 @@ export default function ReportPage({ data }: { data: IPatientData }) {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td className="px-1 py-[2px] border font-bold">S. Iron</td>
-                            <td className="px-1 py-[2px] text-center border">
-                                {isNaN(Number(data.iron)) ? data.iron : Number(data.iron).toFixed(2)}
-                            </td>
-                            <td className="px-1 py-[2px] text-center border">µmol/L</td>
-                            <td className="px-1 py-[2px] border whitespace-pre">
-                                {
-                                    `Male: 11.6-31.3\nFemale: 9.0-30.4`
-                                }
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="px-1 py-[2px] border font-bold">S. Folate</td>
-                            <td className="px-1 py-[2px] text-center border">
-                                {isNaN(Number(data.folate)) ? data.folate : Number(data.folate).toFixed(2)}
-                            </td>
+                        {
+                            data?.iron && (<tr>
+                                <td className="px-1 py-[2px] border font-bold">S. Iron</td>
+                                <td className="px-1 py-[2px] text-center border">
+                                    {isNaN(Number(data.iron)) ? data.iron : Number(data.iron).toFixed(2)}
+                                </td>
+                                <td className="px-1 py-[2px] text-center border">µmol/L</td>
+                                <td className="px-1 py-[2px] border whitespace-pre">
+                                    {
+                                        `Male: 11.6-31.3\nFemale: 9.0-30.4`
+                                    }
+                                </td>
+                            </tr>)
+                        }
+                        {
+                            data?.folate && (<tr>
+                                <td className="px-1 py-[2px] border font-bold">S. Folate</td>
+                                <td className="px-1 py-[2px] text-center border">
+                                    {isNaN(Number(data.folate)) ? data.folate : Number(data.folate).toFixed(2)}
+                                </td>
 
-                            <td className="px-1 py-[2px] text-center border">ng/ml</td>
-                            <td className="px-1 py-[2px] border whitespace-pre">
-                                {`2-16 Years : 5-21\n>16 Years: 3-20`}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="px-1 py-[2px] border font-bold">S. Vitamin B12</td>
-                            <td className="px-1 py-[2px] text-center border">{data.b12}</td>
-                            <td className="px-1 py-[2px] text-center border">pg/ml</td>
-                            <td className="px-1 py-[2px] border">187 - 883</td>
-                        </tr>
+                                <td className="px-1 py-[2px] text-center border">ng/ml</td>
+                                <td className="px-1 py-[2px] border whitespace-pre">
+                                    {`2-16 Years : 5-21\n>16 Years: 3-20`}
+                                </td>
+                            </tr>)
+                        }
+                        {
+                            data.b12 && (<tr>
+                                <td className="px-1 py-[2px] border font-bold">S. Vitamin B12</td>
+                                <td className="px-1 py-[2px] text-center border">{data.b12}</td>
+                                <td className="px-1 py-[2px] text-center border">pg/ml</td>
+                                <td className="px-1 py-[2px] border">187 - 883</td>
+                            </tr>)
+                        }
                     </tbody>
                 </table>
             </div>

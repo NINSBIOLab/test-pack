@@ -25,11 +25,10 @@ export default function HomePage() {
       <div className="flex">
         <Link
           className={stt}
-          href="/mb">Micro</Link>
-
+          href="/bio">Bio</Link>
         <Link
           className={stt}
-          href="/bio">Bio</Link>
+          href="/mb">Micro</Link>
       </div>
 
       <button
