@@ -28,7 +28,7 @@ export default function HomePage() {
   };
 
   useEffect(() => {
-    fetch(`/mb/${center}.json`)
+    fetch(`/mb/p2/${center}.json`)
       .then((res) => res.json())
       .then((data) => {
         setPatients(data);
