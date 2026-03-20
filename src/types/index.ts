@@ -1,5 +1,5 @@
 // types/index.ts
-export type DepartmentType = 'haematology' | 'biochemistry' | 'serology'
+export type DepartmentType = 'Haematology' | 'Biochemistry' | 'Serology'
 export type ReportStatus = 'pending' | 'completed' | 'verified'
 
 export interface Patient {

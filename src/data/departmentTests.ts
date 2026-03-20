@@ -13,7 +13,7 @@ export const departmentTests: Record<DepartmentType, {
     }
   }[]
 }> = {
-  haematology: {
+  Haematology: {
     name: 'Haematology',
     tests: [
       {
@@ -66,7 +66,7 @@ export const departmentTests: Record<DepartmentType, {
       }
     ]
   },
-  biochemistry: {
+  Biochemistry: {
     name: 'Biochemistry',
     tests: [
       {
@@ -137,7 +137,7 @@ export const departmentTests: Record<DepartmentType, {
       }
     ]
   },
-  serology: {
+  Serology: {
     name: 'Serology',
     tests: [
       {

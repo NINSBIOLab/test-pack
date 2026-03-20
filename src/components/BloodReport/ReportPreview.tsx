@@ -22,17 +22,17 @@ const ReportPreview: React.FC<ReportPreviewProps> = ({ billNumber, patient, resu
 
   const getDepartmentColor = (department: DepartmentType) => {
     switch(department) {
-      case 'haematology': return 'border-red-200 bg-red-50'
-      case 'biochemistry': return 'border-green-200 bg-green-50'
-      case 'serology': return 'border-blue-200 bg-blue-50'
+      case 'Haematology': return 'border-red-200 bg-red-50'
+      case 'Biochemistry': return 'border-green-200 bg-green-50'
+      case 'Serology': return 'border-blue-200 bg-blue-50'
     }
   }
 
   const getDepartmentIcon = (department: DepartmentType) => {
     switch(department) {
-      case 'haematology': return '🩸'
-      case 'biochemistry': return '🧪'
-      case 'serology': return '🔬'
+      case 'Haematology': return '🩸'
+      case 'Biochemistry': return '🧪'
+      case 'Serology': return '🔬'
     }
   }
 

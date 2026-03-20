@@ -11,19 +11,19 @@ interface DepartmentSelectorProps {
 const DepartmentSelector: React.FC<DepartmentSelectorProps> = ({ onSelect }) => {
   const departments: { type: DepartmentType; name: string; description: string; icon: string }[] = [
     {
-      type: 'haematology',
+      type: 'Haematology',
       name: 'Haematology',
       description: 'Complete blood count, coagulation studies, peripheral smear',
       icon: '🩸'
     },
     {
-      type: 'biochemistry',
+      type: 'Biochemistry',
       name: 'Biochemistry',
       description: 'Liver function, kidney function, lipid profile, blood glucose',
       icon: '🧪'
     },
     {
-      type: 'serology',
+      type: 'Serology',
       name: 'Serology',
       description: 'Immunology, hormones, tumor markers, infectious diseases',
       icon: '🔬'

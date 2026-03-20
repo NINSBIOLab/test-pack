@@ -12,8 +12,8 @@ const BloodReportSystem: React.FC = () => {
   // const [testResults, setTestResults] = useState<any>()
   const [loading, setLoading] = useState(false)
   const [savedBills, setSavedBills] = useState<Bill[]>(mockBills)
-  const [departmentFilter, setDepartmentFilter] = useState<string>("haematology")
-  const dept = ["haematology", "biochemistry", "serology"]
+  const [departmentFilter, setDepartmentFilter] = useState<string>("Haematology")
+  const dept = ["Haematology", "Biochemistry", "Serology"]
   const [filteredBills, setFilteredBills] = useState<TestDefinition[]>([])
 
   const [loadingProgress, setLoadingProgress] = useState(0)
@@ -116,7 +116,7 @@ const BloodReportSystem: React.FC = () => {
                 value={billNumber}
                 onChange={(e) => setBillNumber(e.target.value)}
                 className="w-full p-1 px-2 border border-gray-300 rounded-md text-lg"
-                placeholder="e.g., 26000001"
+                placeholder="e.g 26000001"
                 autoFocus
               />
             </div>
@@ -126,7 +126,7 @@ const BloodReportSystem: React.FC = () => {
               </label>
               <select
                 onChange={(e) => setDepartmentFilter(e.currentTarget.value)}
-                className="w-full mt-1 p-1 px-2 border border-gray-300 rounded-md text-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                className="w-full p-1.5 px-2 border border-gray-300 rounded-md text-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 {
                   dept.map((dep, idx) => (
                     <option key={idx} value={dep}>
@@ -210,14 +210,13 @@ const BloodReportSystem: React.FC = () => {
                     <tbody className="divide-y divide-gray-100">
                       {filteredBills.map((test: any) => (
                         <tr key={test.id} className="hover:bg-gray-50/80 transition-colors">
-                          <td className="px-6 py-4">
+                          <td className="px-3 py-1">
                             <div>
                               <div className="font-medium text-gray-800">{test.name}</div>
-                              <div className="text-xs text-gray-400">{test.nameShort}</div>
                             </div>
                           </td>
-                          <td className="px-6 py-4 text-sm text-gray-600">{test.unit}</td>
-                          <td className="px-6 py-4">
+                          <td className="px-3 py-1 text-sm text-gray-600">{test.unit}</td>
+                          <td className="px-3 py-1">
                             <input
                               type="number"
                               name={test.nameShort}
@@ -225,7 +224,7 @@ const BloodReportSystem: React.FC = () => {
                               className="w-28 px-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
                             />
                           </td>
-                          <td className="px-6 py-4">
+                          <td className="px-3 py-1">
                             <span className="text-sm text-gray-600">{test.referenceRange.male}</span>
                           </td>
                         </tr>
